@@ -8348,3 +8348,67 @@ body {
         transform: translateY(45px);
     }
 }
+
+/* =========================================
+   FINAL STICKY NAV + HORIZONTAL SCROLL FIX
+========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.work-page,
+.acting-page {
+    overflow: visible;
+}
+
+.section-nav,
+.work-section-nav,
+.acting-section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+
+/* Keep the Acting page from moving sideways
+   without breaking sticky navigation */
+.acting-body,
+.acting-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+@media (max-width: 700px) {
+    .acting-body,
+    .acting-page {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+        overscroll-behavior-x: none;
+    }
+}
+
+/* =========================================
+   FINAL WORK NAVIGATION FIX
+========================================= */
+
+.work-body {
+    overflow-x: clip !important;
+}
+
+.work-page {
+    overflow: visible !important;
+    min-height: 100vh;
+}
+
+.work-section-nav {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+    align-self: flex-start;
+}
