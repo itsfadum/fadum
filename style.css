@@ -8152,3 +8152,148 @@ html {
 
 }
 
+/* =========================================
+   FINAL HOMEPAGE FIXES
+========================================= */
+
+/* Stop the white strip at the bottom */
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: #111111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.new-welcome {
+    min-height: 100svh;
+    background: #111111;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   DESKTOP: NAME + PHOTOS SIDE BY SIDE
+========================================= */
+
+.home-main-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.home-carousel {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: min(390px, 34vw);
+    flex-shrink: 0;
+    z-index: 5;
+}
+
+.home-carousel-track {
+    position: relative;
+    width: 100%;
+    height: 245px;
+}
+
+.home-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: -8px;
+}
+
+
+/* =========================================
+   MOBILE: PHOTO UNDER THE IDENTITY
+========================================= */
+
+@media (max-width: 700px) {
+
+    .new-welcome {
+        min-height: 100svh;
+        padding-bottom: 35px;
+    }
+
+    .home-main-row {
+        display: block;
+    }
+
+    .home-name {
+        font-size: clamp(72px, 20vw, 110px);
+    }
+
+    /* Keep the photos in their own space */
+    .home-carousel {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+
+        width: 100%;
+        max-width: 330px;
+
+        margin: 28px auto 0;
+    }
+
+    .home-carousel-track {
+        height: 225px;
+    }
+
+    .home-carousel-photo {
+        width: 145px;
+        height: 205px;
+    }
+
+    .home-carousel-photo.is-left {
+        transform:
+            translateX(-145%)
+            translateY(10px)
+            scale(0.72)
+            rotate(-5deg);
+    }
+
+    .home-carousel-photo.is-right {
+        transform:
+            translateX(45%)
+            translateY(10px)
+            scale(0.72)
+            rotate(5deg);
+    }
+
+    .home-carousel-controls {
+        margin-top: -2px;
+    }
+
+    .home-carousel-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    /* Text stays BELOW the carousel */
+    .home-identity {
+        position: relative;
+        z-index: 2;
+        margin-top: 18px;
+    }
+
+    .home-greeting {
+        position: relative;
+        z-index: 2;
+        margin-top: 28px;
+    }
+
+    .home-intro-line {
+        position: relative;
+        z-index: 2;
+    }
+}
