@@ -8470,3 +8470,25 @@ body {
     }
 
 }
+
+/* Mobile experience layout */
+@media (max-width: 768px) {
+    .experience-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-date {
+        margin-top: 6px;
+        align-self: flex-start;
+        text-align: left;
+    }
+}
