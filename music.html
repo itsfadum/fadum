@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fadum | Music">
+    <title>Fadum | Music</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .music-coming-soon {
+            min-height: 100vh;
+            background: #111;
+            color: #F4F2ED;
+            padding: 30px 5%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .music-coming-soon::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            right: -160px;
+            top: -220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(49,87,213,.25), transparent 70%);
+            pointer-events: none;
+        }
+        .music-topbar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: rgba(244,242,237,.6);
+        }
+        .music-topbar a { transition: color .25s ease; }
+        .music-topbar a:hover { color: #6C8CFF; }
+        .music-message {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 950px;
+            padding: 80px 0;
+        }
+        .music-eyebrow {
+            color: #6C8CFF;
+            font-size: 10px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 28px;
+        }
+        .music-message h1 {
+            font-size: clamp(64px, 12vw, 160px);
+            line-height: .9;
+            letter-spacing: -5px;
+            margin: 0;
+        }
+        .music-message h1 span {
+            display: block;
+            color: #6C8CFF;
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: -2px;
+        }
+        .music-message p {
+            max-width: 480px;
+            margin-top: 35px;
+            color: rgba(244,242,237,.68);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .music-status {
+            margin-top: 36px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            border: 1px solid rgba(244,242,237,.25);
+            padding: 13px 17px;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+        .music-status::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #6C8CFF;
+            box-shadow: 0 0 14px rgba(108,140,255,.8);
+        }
+        .music-footer {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            color: rgba(244,242,237,.4);
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px) {
+            .music-coming-soon { padding: 24px 6%; }
+            .music-message h1 { letter-spacing: -3px; }
+            .music-message p { font-size: 14px; }
+            .music-topbar { font-size: 9px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="music-coming-soon">
+        <header class="music-topbar">
+            <a href="index.html">← FADUM</a>
+            <span>MUSIC</span>
+        </header>
+        <section class="music-message">
+            <div class="music-eyebrow">A NEW CREATIVE CHAPTER</div>
+            <h1>Something<br><span>is coming.</span></h1>
+            <p>
+                I'm building toward something new. The sound, the stories, and the music are still taking shape.
+                Check back soon.
+            </p>
+            <div class="music-status">MUSIC PAGE IN PROGRESS</div>
+        </section>
+        <footer class="music-footer">
+            <span>© 2026 Fadum</span>
+            <span>fadum.me</span>
+        </footer>
+    </main>
+</body>
+</html>

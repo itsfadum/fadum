@@ -235,9 +235,7 @@ a {
 
     flex-shrink: 0;
 
-    font-family:
-        "Bungee",
-        sans-serif;
+    font-family: "Carter One", cursive !important;
 
     font-size:
         clamp(80px, 11vw, 175px);
@@ -777,16 +775,11 @@ a {
 
 
 .home-choice h2 {
-
     margin: 0 0 12px;
-
-    font-size:
-        clamp(50px, 6vw, 90px);
-
-    line-height: 0.85;
-
-    letter-spacing: -5px;
-
+    font-family: "Carter One", cursive !important;
+    font-size: 55px !important;
+    line-height: 0.95;
+    letter-spacing: 3px !important;
 }
 
 
@@ -1197,14 +1190,11 @@ a {
     }
 
 
-    .home-choice h2 {
-
-        font-size:
-            20vw;
-
-        letter-spacing:
-            -6px;
-
+   .home-choice h2 {
+    font-family: "Carter One", cursive !important;
+    font-size: 42px !important;
+    line-height: 0.95;
+    letter-spacing: 2px !important;
     }
 
 
@@ -8490,5 +8480,27 @@ body {
         margin-top: 6px;
         align-self: flex-start;
         text-align: left;
+    }
+}
+
+/* Homepage destination layout: WORK, ACTING, and MUSIC on one row */
+@media (min-width: 701px) {
+    .home-choices {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .home-choice {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-choices {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
