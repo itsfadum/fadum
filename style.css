@@ -8650,3 +8650,122 @@ body {
     font-weight: 700;
     letter-spacing: 0.04em;
 }
+
+
+/* Education section layout restoration */
+.education-section {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 70px;
+    background: var(--navy);
+    color: var(--ivory);
+}
+
+.education-section .section-content {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+}
+
+.education-section .section-content h2 {
+    max-width: none;
+    margin-bottom: 60px;
+    color: var(--ivory);
+    font-size: clamp(56px, 7vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -6px;
+}
+
+.education-section .section-content h2 span {
+    display: inline;
+    color: #6C8CFF;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+.education-section .education-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(244, 242, 237, 0.24);
+}
+
+.education-section .education-highlights {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+    gap: 55px;
+    margin-top: 55px;
+    padding-top: 35px;
+    border-top: 1px solid rgba(244, 242, 237, 0.24);
+}
+
+.education-section .education-subheading {
+    margin-bottom: 22px;
+    color: #6C8CFF;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.education-section .education-gpa-value {
+    color: var(--ivory);
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 600;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.education-section .education-gpa-value span {
+    color: rgba(244, 242, 237, 0.5);
+    font-size: 0.42em;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.education-section .coursework-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 35px;
+}
+
+.education-section .coursework-list span {
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(244, 242, 237, 0.16);
+    color: rgba(244, 242, 237, 0.82);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 750px) {
+    .education-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 45px 6%;
+    }
+
+    .education-section .section-content h2 {
+        font-size: clamp(44px, 11vw, 72px);
+        letter-spacing: -3px;
+    }
+
+    .education-section .education-details {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .education-section .education-highlights {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 40px;
+        padding-top: 28px;
+    }
+
+    .education-section .coursework-list {
+        grid-template-columns: 1fr;
+    }
+}
