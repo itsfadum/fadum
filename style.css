@@ -8769,3 +8769,120 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =========================================
+   GEORGIA STATE UNIVERSITY EXPERIENCE TIMELINE
+========================================= */
+
+.gsu-experience-block {
+    margin-top: 3rem;
+}
+
+.gsu-company-header {
+    margin-bottom: 2rem;
+}
+
+.gsu-company-header .experience-company {
+    align-items: center;
+}
+
+.gsu-company-header .experience-company h3 {
+    margin-bottom: 5px;
+}
+
+.gsu-timeline {
+    position: relative;
+    margin-left: 23px;
+    padding-left: 34px;
+}
+
+.gsu-timeline::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    bottom: 12px;
+    left: 4px;
+    width: 2px;
+    background: rgba(174, 182, 194, 0.28);
+}
+
+.gsu-timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding-bottom: 2.6rem;
+}
+
+.gsu-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.gsu-timeline-marker {
+    position: absolute;
+    top: 7px;
+    left: -34px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #AEB6C2;
+    box-shadow: 0 0 0 4px var(--ivory);
+}
+
+.gsu-position-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 20px;
+    margin-left: 1rem;
+}
+
+.gsu-position-heading h3 {
+    margin: 0;
+}
+
+.gsu-position-heading > span {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.gsu-position-description {
+    margin-top: 1rem;
+    padding-left: 1.6rem;
+    max-width: 850px;
+}
+
+.gsu-position-description ul {
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .gsu-company-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .gsu-timeline {
+        margin-left: 16px;
+        padding-left: 27px;
+    }
+
+    .gsu-timeline-marker {
+        left: -27px;
+    }
+
+    .gsu-position-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        margin-left: 1rem;
+    }
+
+    .gsu-position-heading > span {
+        text-align: left;
+    }
+
+    .gsu-position-description {
+        padding-left: 0;
+    }
+}
